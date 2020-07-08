@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{678628AA-05AC-426B-BCBA-E04B6091572B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>InteractiveStory</RootNamespace>
+    <AssemblyName>InteractiveStory</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action.cs" />
+    <Compile Include="Actions\DisableIcon.cs" />
+    <Compile Include="Actions\EnableIcon.cs" />
+    <Compile Include="Actions\End.cs" />
+    <Compile Include="Actions\SetPosition.cs" />
+    <Compile Include="Dialogs\BanditDialog.cs" />
+    <Compile Include="Dialogs\BlacksmithDialog.cs" />
+    <Compile Include="Dialogs\EmmiliaAttackDialog.cs" />
+    <Compile Include="Dialogs\EmmiliaDeathDialog.cs" />
+    <Compile Include="Dialogs\EmmiliaDialog.cs" />
+    <Compile Include="Dialogs\EmmiliaDialog2.cs" />
+    <Compile Include="Dialogs\GrandmaDialog.cs" />
+    <Compile Include="Dialogs\LionheartDialog.cs" />
+    <Compile Include="Dialogs\LionheartDialog2.cs" />
+    <Compile Include="Dialogs\LionheartDialog3.cs" />
+    <Compile Include="Dialogs\NecroAttackDialog.cs" />
+    <Compile Include="Dialogs\NecroDialog.cs" />
+    <Compile Include="Dialogs\NecroDialog2.cs" />
+    <Compile Include="Dialogs\NecroDialog3.cs" />
+    <Compile Include="Dialogs\ReviveDialog.cs" />
+    <Compile Include="Events\EmmiliaEvents.cs" />
+    <Compile Include="Events\Inspections.cs" />
+    <Compile Include="Events\LionHeartEvents.cs" />
+    <Compile Include="Events\NecromancerEvents.cs" />
+    <Compile Include="Events\TakeEvents.cs" />
+    <Compile Include="Events\TalkEvents.cs" />
+    <Compile Include="Sequences\CastSequence.cs" />
+    <Compile Include="Sequences\ChestSequence.cs" />
+    <Compile Include="Sequences\DieSequence.cs" />
+    <Compile Include="Sequences\EmmiliaDeath.cs" />
+    <Compile Include="Sequences\EscapeSequence.cs" />
+    <Compile Include="Sequences\FireballTargets.cs" />
+    <Compile Include="Sequences\ForgeSequence.cs" />
+    <Compile Include="Sequences\LionheartDeath.cs" />
+    <Compile Include="Sequences\NecroDeath.cs" />
+    <Compile Include="Sequences\PoisonSequence.cs" />
+    <Compile Include="Sequences\PotionTargets.cs" />
+    <Compile Include="Sequences\ReviveSequence.cs" />
+    <Compile Include="Sequences\SecretEndingSequence.cs" />
+    <Compile Include="Sequences\SimpleDialog.cs" />
+    <Compile Include="Events\DebugEvents.cs" />
+    <Compile Include="Events\PotionEvents.cs" />
+    <Compile Include="Events\SkillEvents.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="Sequences\Narration.cs" />
+    <Compile Include="Sequences\SkillEarned.cs" />
+    <Compile Include="Sequences\TakeSequence.cs" />
+    <Compile Include="Actions\Wait.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="Dialogs\BobDialog.cs" />
+    <Compile Include="Dialogs\BobExpoDialog.cs" />
+    <Compile Include="Dialogs\Dialog.cs" />
+    <Compile Include="Dialogs\EmmiliaIntroDialog.cs" />
+    <Compile Include="Dialogs\ExpositionFinishDialog.cs" />
+    <Compile Include="Dialogs\GuardDialog.cs" />
+    <Compile Include="Dialogs\LionheartIntroDialog.cs" />
+    <Compile Include="Dialogs\NecroIntroDialog.cs" />
+    <Compile Include="Entities\Characters.cs" />
+    <Compile Include="Entities\Places.cs" />
+    <Compile Include="GameState.cs" />
+    <Compile Include="Portal.cs" />
+    <Compile Include="ExperienceManager.cs" />
+    <Compile Include="InputController.cs" />
+    <Compile Include="Listener.cs" />
+    <Compile Include="Place.cs" />
+    <Compile Include="Entities\Constants.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IResponder.cs" />
+    <Compile Include="Sequence.cs" />
+    <Compile Include="Sequences\CreateCharacterSequence.cs" />
+    <Compile Include="Sequences\EnableControlsSequence.cs" />
+    <Compile Include="Sequences\EndDialogSequence.cs" />
+    <Compile Include="Sequences\ExpositionSequence.cs" />
+    <Compile Include="Sequences\IntroSequence.cs" />
+    <Compile Include="Sequences\StarterSequence.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
